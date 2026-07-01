@@ -3,167 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destinos Incríveis no Paraná</title>
+    <title>Blog | As 7 Maravilhas do Paraná</title>
     <style>
-        /* Estilos CSS para deixar o blog bonito */
-        :root {
-            --cor-primaria: #2c3e50;
-            --cor-secundaria: #27ae60;
-            --cor-fundo: #f5f6fa;
-            --cor-texto: #333;
+        /* Estilos Globais e Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto);
+            line-height: 1.7;
+            background-color: #f0f4f1;
+            color: #2c3e50;
         }
 
+        /* Cabeçalho Magnífico */
         header {
-            background-color: var(--cor-primaria);
+            background: linear-gradient(rgba(27, 94, 32, 0.8), rgba(76, 175, 80, 0.85)), 
+                        url('https://images.unsplash.com/photo-1585551897057-c100311740c1?auto=format&fit=crop&w=1200&q=80') no-repeat center/cover;
             color: white;
+            padding: 100px 20px;
             text-align: center;
-            padding: 3rem 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
         }
 
         header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            color: #bdc3c7;
-        }
-
-        .container {
-            max-width: 1200px;
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
         }
 
-        /* Grade de Destinos */
-        .grid-destinos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+        /* Container Principal */
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
-        /* Cartão de cada destino */
-        .card {
+        /* Estilização dos Cards das Maravilhas */
+        .card-maravilha {
             background: white;
-            border-radius: 10px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            margin-bottom: 45px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            border-bottom: 4px solid #4caf50;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card:hover {
+        .card-maravilha:hover {
             transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .card img {
+        /* Imagens Responsivas */
+        .card-maravilha img {
             width: 100%;
-            height: 200px;
+            height: 450px;
             object-fit: cover;
+            display: block;
         }
 
-        .card-conteudo {
-            padding: 1.5rem;
+        /* Conteúdo do Card */
+        .conteudo-card {
+            padding: 30px;
         }
 
-        .card-conteudo h2 {
-            margin-top: 0;
-            color: var(--cor-primaria);
+        .conteudo-card h2 {
+            color: #1b5e20;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
         }
 
-        .card-conteudo p {
-            line-height: 1.6;
-            color: #666;
-        }
-
-        .btn-leia-mais {
+        .localizacao {
             display: inline-block;
-            margin-top: 1rem;
-            padding: 10px 20px;
-            background-color: var(--cor-secundaria);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
             font-weight: bold;
-            transition: background 0.3s ease;
+            margin-bottom: 15px;
         }
 
-        .btn-leia-mais:hover {
-            background-color: #219a52;
+        .conteudo-card p {
+            color: #546e7a;
+            font-size: 1.05rem;
         }
 
+        /* Rodapé */
         footer {
+            background-color: #1a252f;
+            color: #95a5a6;
             text-align: center;
-            padding: 2rem;
-            background-color: var(--cor-primaria);
-            color: white;
-            margin-top: 3rem;
+            padding: 30px 20px;
+            font-size: 0.95rem;
+            margin-top: 60px;
+        }
+
+        footer strong {
+            color: #fff;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Descubra o Paraná</h1>
-        <p>Os melhores roteiros e lugares inesquecíveis para a sua próxima viagem.</p>
+        <h1>As 7 Maravilhas do Paraná</h1>
+        <p>Um roteiro completo pelas paisagens mais surpreendentes, riquezas naturais e monumentos do estado.</p>
     </header>
 
-    <div class="container">
-        <h2>Top Destinos</h2>
-        
-        <div class="grid-destinos">
-            
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=600&q=80" alt="Cataratas do Iguaçu">
-                <div class="card-conteudo">
-                    <h2>Foz do Iguaçu</h2>
-                    <p>Casa de uma das Sete Maravilhas da Natureza, as Cataratas do Iguaçu impressionam pela sua força e beleza. Um destino obrigatório para quem ama a natureza.</p>
-                    <a href="#" class="btn-leia-mais">Ler Roteiro</a>
-                </div>
-            </article>
+    <main>
+        <article class="card-maravilha">
+            <img src="https://images.unsplash.com/photo-1585551897057-c100311740c1?auto=format&fit=crop&w=900&q=80" alt="Cataratas do Iguaçu">
+            <div class="conteudo-card">
+                <h2>1. Cataratas do Iguaçu</h2>
+                <span class="localizacao">📍 Foz do Iguaçu</span>
+                <p>Eleita uma das Novas Sete Maravilhas da Natureza, o conjunto de 275 quedas d'água no Rio Iguaçu oferece um espetáculo de força, som e beleza natural impossível de esquecer. A Garganta do Diabo é o ponto alto da passarela.</p>
+            </div>
+        </article>
 
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1631558231268-d0e82c58971f?auto=format&fit=crop&w=600&q=80" alt="Jardim Botânico de Curitiba">
-                <div class="card-conteudo">
-                    <h2>Curitiba</h2>
-                    <p>A capital ecológica do Brasil! Conheça o icônico Jardim Botânico, o Museu Oscar Niemeyer (Museu do Olho) e desfrute da excelente gastronomia local.</p>
-                    <a href="#" class="btn-leia-mais">Ler Roteiro</a>
-                </div>
-            </article>
+        <article class="card-maravilha">
+            <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=900&q=80" alt="Parque Estadual de Vila Velha">
+            <div class="conteudo-card">
+                <h2>2. Parque Estadual de Vila Velha</h2>
+                <span class="localizacao">📍 Ponta Grossa</span>
+                <p>Um sítio geológico impressionante composto por esculturas naturais de arenito moldadas pela erosão de chuvas e ventos ao longo de 300 milhões de anos. O destaque principal fica para a icônica formação em formato de Taça.</p>
+            </div>
+        </article>
 
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1628178149818-8f8139bdcd7c?auto=format&fit=crop&w=600&q=80" alt="Ilha do Mel">
-                <div class="card-conteudo">
-                    <h2>Ilha do Mel</h2>
-                    <p>Um verdadeiro paraíso rústico no litoral paranaense. Sem carros, com praias paradisíacas, a Fortaleza de Nossa Senhora dos Prazeres e o Farol das Conchas.</p>
-                    <a href="#" class="btn-leia-mais">Ler Roteiro</a>
-                </div>
-            </article>
+        <article class="card-maravilha">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Ilha do Mel">
+            <div class="conteudo-card">
+                <h2>3. Ilha do Mel</h2>
+                <span class="localizacao">📍 Paranaguá</span>
+                <p>Um santuário ecológico rodeado pelo Oceano Atlântico onde a entrada de veículos motorizados é proibida. Suas praias selvagens são interligadas por trilhas de areia pura que levam ao Farol das Conchas e à histórica Fortaleza.</p>
+            </div>
+        </article>
 
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1549488344-c7da7925e01b?auto=format&fit=crop&w=600&q=80" alt="Parque Estadual de Vila Velha">
-                <div class="card-conteudo">
-                    <h2>Ponta Grossa (Vila Velha)</h2>
-                    <p>Famosa por suas formações rochosas de arenito, como a "Taça", além das misteriosas furnas e da belíssima Lagoa Dourada.</p>
-                    <a href="#" class="btn-leia-mais">Ler Roteiro</a>
-                </div>
-            </article>
+        <article class="card-maravilha">
+            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=900&q=80" alt="Jardim Botânico de Curitiba">
+            <div class="conteudo-card">
+                <h2>4. Jardim Botânico de Curitiba</h2>
+                <span class="localizacao">📍 Curitiba</span>
+                <p>O cartão-postal mais famoso da capital paranaense destaca-se pela sua imponente estufa metálica inspirada no Palácio de Cristal de Londres. É cercada por jardins geométricos ao estilo francês que mudam de cor a cada estação.</p>
+            </div>
+        </article>
 
-        </div>
-    </div>
+        <article class="card-maravilha">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Canyon Guartelá">
+            <div class="conteudo-card">
+                <h2>5. Canyon Guartelá</h2>
+                <span class="localizacao">📍 Tibagi</span>
+                <p>Considerado o sexto maior canyon do mundo em extensão e o único com vegetação nativa preservada de forma contínua. Esculpido pelo Rio Iapó, apresenta paredões colossais, cachoeiras cristalinas e inscrições rupestres antigas.</p>
+            </div>
+        </article>
+
+        <article class="card-maravilha">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Estrada da Graciosa">
+            <div class="conteudo-card">
+                <h2>6. Estrada da Graciosa</h2>
+                <span class="localizacao">📍 Antonina / Morretes</span>
+                <p>Uma charmosa e histórica rota construída no século XIX sobre antigos caminhos indígenas. Pavimentada com paralelepípedos, ela corta a exuberante e preservada Mata Atlântica da Serra do Mar, decorada por hortênsias.</p>
+            </div>
+        </article>
+
+        <article class="card-maravilha">
+            <img src="https://images.unsplash.com/photo-1548625361-155deee223d2?auto=format&fit=crop&w=900&q=80" alt="Catedral de Maringá">
+            <div class="conteudo-card">
+                <h2>7. Catedral Metropolitana de Maringá</h2>
+                <span class="localizacao">📍 Maringá</span>
+                <p>Uma impressionante obra-prima da arquitetura moderna com traços inspirados nos foguetes Sputnik. Com formato cônico arrojado, ergue-se a 124 metros de altura, consagrando-se como a catedral mais alta de toda a América Latina.</p>
+            </div>
+        </article>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Blog Viagens pelo Paraná. Criado com dedicação.</p>
+        <p>Blog desenvolvido em <strong>Visual Studio Code</strong> &copy; 2026. Explore o Paraná!</p>
     </footer>
 
 </body>
